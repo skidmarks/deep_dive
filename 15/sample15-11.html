@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역 객체와 let</title>
+</head>
+<body>
+    <script>
+        // 이 예제는 브라우저 환경에서 실행해야 한다.
+
+        // 전역 변수
+        var x = 1;
+
+        // 암묵적 전역
+        y = 2;
+
+        // 전역 함수
+        function foo() {}
+
+        // var 키워드로 선언한 전역 변수는 전역 객채 window의 프로퍼티다.
+        console.log("window객체의 프로퍼티로서 x의 값은 " + window.x);
+        // 전역 객체 window의 프로퍼티는 전역 변수처럼 사용할 수 있다.
+        console.log("전역 변수 처럼 사용한 x의 값은 " + x);
+
+        // 암묵적 전역은 전역 객체 window의 프로퍼티다.
+        console.log("암묵적 전역인 window객체의 프로퍼티로서 y의 값은 "+ window.y);
+        console.log("암묵적 전역 변수 처럼 사용한 x의 값은 " + y);
+
+        // 함수 선언문으로 정의한 전역 함수는 전역 객체 window의 프로퍼티다.
+        console.log(window.foo);
+        // 전역 객체 window의 프로퍼티는 전역 변수처럼 사용할 수 있다.
+        console.log(foo);
+    </script>
+</body>
+</html>
