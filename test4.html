@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+<style>
+
+dl dt{cursor:pointer;}
+
+dl dd{}
+
+dl.active{background-color:red;}
+
+</style>
+
+</head>
+
+<body>
+    <div class="dash_list_wrap">
+        <dl>
+        
+        <dt>TEST111!</dt>
+        
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. </dd>
+        
+        </dl>
+        
+        <dl class="dash_list_wrap">
+        
+        <dt>TEST222!</dt>
+        
+        <dd>Officiis, esse! Culpa laboriosam optio sunt repellat a officia doloribus et fuga maxime neque.</dd>
+        
+        </dl>
+        
+        <dl class="dash_list_wrap">
+        
+        <dt>TEST33333!</dt>
+        
+        <dd>Culpa laboriosam optio sunt repellat a officia doloribus et fuga maxime neque.</dd>
+        
+        </dl>
+        
+    </div>
+
+
+<script>
+
+(function() {
+
+document.addEventListener('DOMContentLoaded', function() {
+
+var $list_tits = document.querySelectorAll('.dash_list_wrap dt');
+
+for(var i = 0; i < $list_tits.length; i++) {
+
+var listTitle = $list_tits[i];
+
+listTitle.addEventListener('click', function() {
+
+this.nextElementSibling.parentNode.classList.toggle('active');
+
+});
+
+}
+
+});
+
+})();
+
+</script>
+
+</body>
+
+</html>

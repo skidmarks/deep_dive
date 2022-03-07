@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList forEach</title>
+</head>
+<body>
+    <ul>
+        <li>test1</li>
+        <li>test2</li>
+        <li>test3</li>
+        <li>test4</li>
+        <li>test5</li>
+    </ul>
+
+    <script>
+        var $li = document.querySelectorAll('li');
+        $li.forEach(function(currentValue, currentIndex, listObj) {
+            console.log(currentValue);
+            console.log(currentValue.textContent);
+            console.log(listObj.length);
+            console.log("currentIndex-" + currentIndex)
+        });
+    </script>
+</body>
+</html>

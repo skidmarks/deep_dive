@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="data1"></p>
+    <p id="data2"></p>
+
+    <script>
+        var n = new Date(2092,10,10);
+        var d = new Date(1987,3,10);
+        n.setMonth(n.getMonth()+5);
+
+        if(n.getDate() < d.getDate()) {
+            n.setMonth(n.getMonth()-1);
+        }
+
+        if(n.getMonth() < d.getMonth()) {
+            n.setFullYear(n.getFullYear()-1);
+        }
+
+        document.getElementById("demo").innerHTML = Number(n.getFullYear()) - Number(d.getFullYear());
+
+        document.getElementById("data1").innerHTML = n.getFullYear();
+        document.getElementById("data2").innerHTML = d.getFullYear();
+    </script>
+</body>
+</html>
